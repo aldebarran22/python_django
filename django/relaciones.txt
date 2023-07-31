@@ -1,0 +1,11 @@
+Relaciones entre entidades:
+1 -> 1
+1 -> N (de 1 a muchos)
+Departamentos 		Empleados
+cod (pk)  nombre	cod (pk)  nombre cod-dpo (FK)
+1    	administracion	1    	  aaa    2	
+2    	informatica
+
+
+
+N <-> M (de muchos a muchos)

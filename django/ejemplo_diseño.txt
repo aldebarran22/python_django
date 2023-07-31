@@ -1,0 +1,39 @@
+Academia que organiza cursos y los cursos los imparten varios prof.
+
+cursos
+id curso horas
+1 python basico 30 h
+2 django 40 h
+3 java 25 h
+
+alumnos
+id 	nombre
+1	Irina
+2	Roxana
+3	Jhon...
+
+...
+
+
+profesores
+1 Antonio
+2 Raquel
+3 Juan
+
+convocatorias: Considerando que el curso solo lo imparte un profesor
+id (pk)  fechaini fechafin horario idcurso (FK) idprof (FK)
+1        24/7     3/8     tarde    2             1
+2        31/7     9/8     mañana   2             3
+
+convocatorias-alumnos
+idconvocatoria (pk,fk)	idalumno (pk,fk)
+1			1
+1			2
+
+
+
+
+
+
+
+
