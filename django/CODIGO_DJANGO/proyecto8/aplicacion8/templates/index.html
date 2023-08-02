@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'aplicacion8/css/estilos.css' %}">
+</head>
+<body>
+    <h3>Galería de imágenes</h3>
+    <table>
+        <tr>
+            <td><img src="{% static 'aplicacion8/img/image1.jpg' %}" alt="imagen1"></td>
+            <td><img src="{% static 'aplicacion8/img/image2.jpg' %}" alt="imagen2"></td>
+        </tr>
+        <tr>
+            <td><img src="{% static 'aplicacion8/img/image3.jpg' %}" alt="imagen3"></td>
+            <td><img src="{% static 'aplicacion8/img/image4.jpg' %}" alt="imagen4"></td>
+        </tr>
+
+    </table>
+</body>
+</html>
