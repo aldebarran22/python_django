@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Formulario de contacto</h3>
+    {% if form.errors %}
+        <h4>Tienes errores en el formulario de contacto</h4>
+        {% for field in form %}
+            {% for error in field.errors %}
+                <strong>{{error}}</strong>
+            {% endfor %}
+        {% endfor %}
+    {% endif %}
+    <form action="" method="post">
+        {% csrf_token %}
+        <table>
+            {{form.as_table}}
+        </table>
+        <input type="submit" name="submit" value="Enviar">
+    </form>
+</body>
+</html>
