@@ -28,3 +28,7 @@ def autores(request):
 
 def calculadora(request):
     return render(request, 'calculadora.html')
+
+def infoRequest(request):
+    contexto = {"meta": request.META}
+    return render(request, 'info_request.html', context=contexto)
