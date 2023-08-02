@@ -23,4 +23,5 @@ urlpatterns = [
     path('', aplicacion6.views.index, name="index"),
     path('autores/', aplicacion6.views.autores, name="autores"),
     path('admin/', admin.site.urls),
+    path('calculadora/', aplicacion6.views.calculadora, name='calculadora'),
 ]

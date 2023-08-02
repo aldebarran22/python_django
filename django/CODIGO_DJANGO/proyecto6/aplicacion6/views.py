@@ -20,7 +20,11 @@ def autores(request):
     # Recuperar todos los libros:
     libros = Book.objects.all().order_by("-price")
 
+    #print(type(libros[0].authors))
+
     # Cargamos la información en el contexto y pasamos el contexto al template
     contexto = {"numAutores":numAutores, "totalLibros":d, "libros":libros}
     return render(request, 'autores.html', context=contexto)
 
+def calculadora(request):
+    return render(request, 'calculadora.html')

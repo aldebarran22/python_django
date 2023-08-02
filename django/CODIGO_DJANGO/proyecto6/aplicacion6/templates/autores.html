@@ -21,7 +21,7 @@
             <tr>
                 <td>{{libro.isbn}}</td>
                 <td>{{libro.name}}</td>
-                <td>{{libro.price}} &euro;</td>
+                <td>{{libro.price|floatformat:"2"}} &euro;</td>
                 <td>{{libro.publisher}}</td>
             </tr>
         {% endfor %}
@@ -31,6 +31,14 @@
     <ul>
         {% for libro in libros %}
             <li>{{libro.name}}</li>
+            <li>
+                <ol>
+                    {# all recupera en un iterable todos los autores #}
+                    {% for autor in libro.authors.all %}
+                        <li>{{autor.name}}</li>
+                    {% endfor %} 
+                </ol>
+            </li>
         {% endfor %}
     </ul>
 </body>
