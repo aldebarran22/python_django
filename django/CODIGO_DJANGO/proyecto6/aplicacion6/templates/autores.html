@@ -9,5 +9,29 @@
     <h3>Autores</h3>
     <h4>Recuentos:</h4>
     <p>Número de autores: {{numAutores}}</p>
+    <p>Precio total de los Libros: {{totalLibros.precio_total}} &euro;</p>
+    <table>
+        <tr>
+            <th>ISBN</th>
+            <th>NAME</th>
+            <th>PRICE</th>
+            <th>PUBLISHER</th>
+        </tr>
+        {% for libro in libros %}
+            <tr>
+                <td>{{libro.isbn}}</td>
+                <td>{{libro.name}}</td>
+                <td>{{libro.price}} &euro;</td>
+                <td>{{libro.publisher}}</td>
+            </tr>
+        {% endfor %}
+    </table>
+    <!-- Generar una lista anidada con el titulo del libro y los autores: -->
+    <h3>Libros y Autores</h3>
+    <ul>
+        {% for libro in libros %}
+            <li>{{libro.name}}</li>
+        {% endfor %}
+    </ul>
 </body>
 </html>
