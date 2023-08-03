@@ -24,6 +24,7 @@ urlpatterns = [
     path('', tutorial.views.index),
     path('galeria/', tutorial.views.galeria, name='galeria'),
     path('xml/', tutorial.views.librosxml, name='xml'),
+    path('csv/', tutorial.views.libroscsv, name='csv'),
 ]
 
 
