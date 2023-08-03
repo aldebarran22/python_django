@@ -1,0 +1,21 @@
+#contenedor {
+    width: 80%;
+    margin: 20px auto;
+    text-align: center;
+}
+
+/*
+#izquierda {
+    float:left;
+    width: 20%;
+}
+
+#derecha {
+    float: right;
+    width: 70%;
+}
+
+#clear {
+    clear: both;
+}
+*/

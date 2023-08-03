@@ -1,0 +1,13 @@
+<html>
+    <head><title>LIBRO</title></head>
+    <body>
+        <h3>TITULO: {{book.name}}</h3>
+        <p>ISBN: {{book.isbn}}</p>
+        <p>Precio: {{book.price}}</p>    
+    </body>
+    <p>
+        <a href="{% url 'editalibro' book.pk %}">Editar</a> |
+        <a href="{% url 'borralibro' book.pk %}">Borrar</a> |
+        <a href="{% url 'listalibros' %}">Volver</a>
+    </p>
+</html>   

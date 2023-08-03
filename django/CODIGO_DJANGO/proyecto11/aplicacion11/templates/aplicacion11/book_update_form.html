@@ -1,0 +1,11 @@
+<html>
+    <head><title>LIBROS</title></head>
+    <body>
+        <h3>EDICIÓN DE LIBROS</h3>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" value="ACTUALIZAR">
+        </form>
+    </body>
+</html>

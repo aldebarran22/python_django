@@ -1,0 +1,25 @@
+<html>
+    <head><title>LIBROS</title></head>
+    <body>
+        <h3>LISTADO DE LIBROS</h3>
+        {% if object_list %}
+            <table>
+            {% for i in object_list %}
+                <tr>
+                    <td><a href="{% url 'verlibro' i.pk %}">{{i.isbn}}</a></td>        
+                    <td>{{i.name}}</td>
+                    <td>{{i.price}}</td>   
+                    <td>{{i.publisher.name}}</td>                            
+                </tr>
+            {% endfor %}
+            </table>           
+        {% else %}
+            <p><i>No hay libros en la base de datos</i></p>
+
+        {% endif %}
+        <br />
+        <table>
+            <tr><td><a href="{% url 'nuevolibro' %}">NUEVO LIBRO</a></td></tr>            
+        </table>
+    </body>
+</html>        

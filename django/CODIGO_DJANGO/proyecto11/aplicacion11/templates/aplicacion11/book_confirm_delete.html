@@ -1,0 +1,12 @@
+<html>
+    <head><title>LIBROS</title></head>
+    <body>
+        <h3>BORRAR LIBROS</h3>
+        <form method="post">
+            {% csrf_token %}
+            <p>Estás seguro que quieres borrar el libro {{object}}?</p>
+            {{ form.as_p }}
+            <input type="submit" value="CONFIRMAR">
+        </form>
+    </body>
+</html>

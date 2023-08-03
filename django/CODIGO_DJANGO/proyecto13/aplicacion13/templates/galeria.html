@@ -1,0 +1,17 @@
+{% extends "base_generic.html" %}
+
+{% block content %} 
+    <h3>GALERIA</h3>
+    <p>Estas son las imágenes que tenemos en la BD.</p>
+    <table>
+        {% if fotos %}
+            {% for foto in fotos %}
+                <tr><td>{{foto.titulo}}</td></tr>
+                <tr><td><img src="{{foto.foto.url}}" width="300px" alt="{{foto.titulo}}"></td></tr>            
+                <tr><td>&nbsp;</td></tr>
+            {% endfor %}
+        {% else %}
+            <h3>No hay fotos en la BD</h3>
+        {% endif %}
+    </table>
+{% endblock %} 
