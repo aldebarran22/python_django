@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Galería de fotos</h3>
+    {% if fotos %}
+        <table>
+            {% for f in fotos%}
+            <tr>
+                <td>
+                    <p>{{f.titulo}}</p>
+                    <img src="{{f.foto.url}}" alt="{{f.foto.url}}">
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+    {% else %}
+        <h4>No se han encontrado fotos en la base de datos</h4>
+    {% endif %} 
+</body>
+</html>
