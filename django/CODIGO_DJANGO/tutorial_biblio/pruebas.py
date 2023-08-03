@@ -1,5 +1,5 @@
 
-from tutorial.models import Book, Author, Publisher
+from tutorial.models import Book, Author, Publisher, Store
 from random import randint
 from django.db.models import Avg, Sum, Min, Max, Count
 
@@ -33,4 +33,11 @@ def consultasGrupos():
     print('Num libros por editor:')
     for obj in L:
         print(obj.name, 'num_libros: ', obj.num_books)
+
+    # El precio min y max por cada almacen:
+    L = Store.objects.annotate(min_price=Min('books__price'),max_price=Max('books__price'))
+    for i in L:
+        print(i.name, i.min_price, i.max_price)
+
+
 
