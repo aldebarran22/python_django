@@ -22,9 +22,11 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', tutorial.views.index),
-    path('galeria/', tutorial.views.galeria, name='galeria')
+    path('galeria/', tutorial.views.galeria, name='galeria'),
+    path('xml/', tutorial.views.librosxml, name='xml'),
 ]
 
 
+# Si estas en modo de desarrollo:
 if tutorial_biblio.settings.DEBUG:
     urlpatterns += static(tutorial_biblio.settings.MEDIA_URL, document_root=tutorial_biblio.settings.MEDIA_ROOT)

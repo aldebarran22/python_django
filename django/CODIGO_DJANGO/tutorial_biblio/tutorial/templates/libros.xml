@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<libros>
+    {% for libro in libros %}
+        <libro id="{{libro.id}}">
+            <isbn>{{libro.isbn}}</isbn>
+            <titulo>{{libro.name}}</titulo>
+            <precio>{{libro.price}}</precio>
+            <autores>
+                {% for autor in libro.authors.all %}           
+                    <autor>{{autor.name}}</autor>
+                {% endfor %} 
+            </autores>
+        </libro>
+    {% endfor %}
+</libros>
