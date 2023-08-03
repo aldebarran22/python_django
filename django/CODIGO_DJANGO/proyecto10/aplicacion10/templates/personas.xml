@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<personas>
+    {% for item in registros %}
+            <persona>
+                <nombre>{{item.nombre}}</nombre>
+                <apellido1>{{item.apellido1}}</apellido1>
+                <apellido2>{{item.apellido2}}</apellido2>
+                <dni>{{item.dni}}</dni>
+                <email>{{item.email}}</email>
+                <telefono>{{item.telefono}}</telefono>
+            </persona>
+    {% endfor %}
+</personas>

@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>Formatos</title>    
+        <style>
+            td { border: 2px solid lightgreen}
+            .centrada {
+                margin-left: auto;
+                margin-right: auto;
+                width: 75%;
+                margin-top: 20px;
+            }
+        </style>
+    </head>
+    <body>        
+        <table class="centrada">
+            <caption>LISTADO DE PERSONAS</caption>
+            <tr>
+                <td>NOMBRE</td>    
+                <td>APELLIDO1</td>    
+                <td>APELLIDO2</td>   
+                <td>DNI</td>     
+                <td>EMAIL</td>    
+                <td>TELEFONO</td>                    
+            </tr>
+        {% for item in registros %}
+            <tr>
+                <td>{{item.nombre}}</td>
+                <td>{{item.apellido1}}</td>
+                <td>{{item.apellido2}}</td>
+                <td>{{item.dni}}</td>
+                <td>{{item.email}}</td>
+                <td>{{item.telefono}}</td>
+            </tr>
+        {% endfor %}
+        </table>
+    </body>
+</html>
