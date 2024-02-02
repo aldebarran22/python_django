@@ -4,7 +4,7 @@ numeros: int, float, complex
 """
 
 numero = 1000
-print(numero, type(numero)) # imprime la variable y su tipo
+print(numero, type(numero))
 
 numero = 5.3
 print(numero, type(numero))

@@ -10,8 +10,4 @@ print(numero1 + numero2)
 # Lee de un número como texto y lo convierte a float
 numero1 = float(input('Teclear numero:'))
 numero2 = float(input("Teclear otro numero: "))
-print('El resultado de la suma es: ',numero1 + numero2,' numero entero')
-
-# Con las f-string: lo mismo se escribe:
-print(f'El resultado de la suma de {numero1} + {numero2} = {numero1+numero2}')
-
+print(numero1 + numero2)
