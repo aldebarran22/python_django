@@ -18,3 +18,17 @@ print(L)
 print('los tres primeros: ', L[0:3], L[:3])
 print('los 3 últimos: ', L[-3:])
 print('quitar el primero y el último:', L[1:-1])
+
+# Bucle FOR, in, +, *
+for i in nombres:
+    print(i)
+
+for pos, i in enumerate(nombres):
+    print(pos, i)
+
+nombre = "Ana"
+if nombre in nombres:
+    print(nombre,'esta en la lista')
+    print('Está en la pos: ', nombres.index(nombre))
+else:
+    print('No se encuentra')
