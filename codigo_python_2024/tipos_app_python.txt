@@ -1,0 +1,7 @@
+lenguaje script + shell (bash)
+Aplicaciones de Escritorio: PyQt
+Aplicaciones Web: Django
+Análisis de datos, Machine learning, Deep Learning --> Anaconda
+
+No hay python: Desarrollo de app nativa para SmartPhone
+
