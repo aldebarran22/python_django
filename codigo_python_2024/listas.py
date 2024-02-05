@@ -32,3 +32,11 @@ if nombre in nombres:
     print('Está en la pos: ', nombres.index(nombre))
 else:
     print('No se encuentra')
+
+# Concatenar listas:
+L1 = [1,2,3]
+L2 = [40,50,60]
+print(L1 + L2)
+
+print(L1 * 4)
+print('-'*50)
