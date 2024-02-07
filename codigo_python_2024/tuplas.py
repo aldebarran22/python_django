@@ -15,7 +15,18 @@ frase = "hola que tal"
 t = tuple(frase)
 print(t)
 print('El espacio ocupa la pos: ', t.index(' '))
+print('El 2º espacio ocupa la pos: ', t.index(' ',5))
 try:
     t[0] = "X"
 except Exception as e:
     print(e)
+
+# Imprimir las posiciones que ocupan los blancos en una tupla
+frase = "hola que tal el lunes"
+n = frase.count(' ')
+inicio = 0
+for i in range(n):
+    pos = frase.index(' ', inicio)
+    print('pos blanco:', pos)
+    inicio = pos+1
+
