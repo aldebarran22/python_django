@@ -14,6 +14,7 @@ print(t3, type(t3))
 frase = "hola que tal"
 t = tuple(frase)
 print(t)
+print('El espacio ocupa la pos: ', t.index(' '))
 try:
     t[0] = "X"
 except Exception as e:
