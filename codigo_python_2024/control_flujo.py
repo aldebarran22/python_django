@@ -12,13 +12,25 @@ for fila in M:
     print()
 
 # Dados 2 números comprobar si son iguales, o cual es mayor o menor
-n1 = 10
+n1 = 20
 n2 = 20
 
 if n1 < n2:
     print("El menor es: ", n1)
-
 elif n1 == n2:
     print("son iguales")
 else:
     print("El mayor es: ", n1)
+
+# if compacto:
+# Imprimir "par" si numero es par, y sino impar
+numero = 23
+print("par" if numero % 2 == 0 else "impar")
+
+# Equivale a
+if numero % 2 == 0:
+    print("par")
+else:
+    print("impar")
+
+menor = n1 if n1 < n2 else n2
