@@ -18,3 +18,8 @@ print('num palabras: ', len(palabras))
 palabrasSinRepes = set(palabras)
 print('num palabras sin repes: ', len(palabrasSinRepes))
 
+histograma = dict()
+for palabra in palabrasSinRepes:
+    histograma[palabra] = palabras.count(palabra)
+print(histograma)    
+
