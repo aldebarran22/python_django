@@ -16,4 +16,8 @@ persona1 = ['español','inglés','francés']
 persona2 = ['alemán', 'inglés','español']
 c1 = set(persona1)
 c2 = set(persona2)
-print('idiomas comunes: ', c1 & c2)
+print('idiomas comunes: ', list(c1 & c2))
+print('Idiomas de la persona1 que no conoce la persona2:', c1 - c2)
+print('Idiomas de la persona2 que no conoce la persona1:', c2 - c1)
+print('Entre las dos personas que idiomas hablan: ', c1 | c2)
+print(c1 + c2)
