@@ -9,4 +9,5 @@ fich = open("Contenido.txt","r")
 txt = fich.read()
 fich.close()
 
+txt = txt.replace(",","").replace(".","").replace(";","").replace(":","")
 print(txt)
