@@ -1,0 +1,14 @@
+Objetos: list, set, dict, etc.
+L = [1,2,3,4]
+L.sort() -> objeto.metodo()
+(y sort solo vale para las listas)
+
+Funciones:
+len() (mas general y vale para varios tipos de colecciones)
+
+L = [1,2,3,4]
+len(L)  -> funcion(objeto)
+
+s = "hola"
+len(s)
+
