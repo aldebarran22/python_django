@@ -5,20 +5,24 @@ Paso de parámetros a funciones:
 """
 
 
-def porCopia(numero: int, cad: str) -> None:
+def porCopia(numero: int, cad: str, t:tuple) -> None:
     numero += 100
     cad += "adios"
+    t += (4,5,6)
     print("numero: ", numero, id(numero))
     print("cad: ", cad, id(cad))
+    print("t: ", t, id(t))
     print("-" * 20)
 
 
 def testInmutables():
     numero = 5
     cad = "hola"
-    porCopia(numero, cad)
+    t = (1,2,3)
+    porCopia(numero, cad, t)
     print("numero: ", numero, id(numero))
     print("cad: ", cad, id(cad))
+    print("t", t, id(t))
 
 
 def porReferencia(L: list, d: dict, c: set) -> None:
