@@ -40,3 +40,12 @@ print(L1 + L2)
 
 print(L1 * 4)
 print('-'*50)
+
+# Ordenar listas:
+L = ['Raúl','Sonia','Alba','Ana','Jorge','Jose María']
+L.sort()
+print(L)
+L.sort(reverse=True)
+print(L)
+L.sort(key=len)
+print(L)
