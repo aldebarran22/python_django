@@ -22,3 +22,5 @@ if __name__ == '__main__':
     print('suma de 5 y 6: ', sumar(*t)) # con una tupla
     L = [5,6]
     print('suma de 5 y 6: ', sumar(*L)) # con una tupla
+    d = {"x":5, "y":6}
+    print('suma de 5 y 6: ', sumar(**d)) # con un diccionario
