@@ -29,3 +29,12 @@ calcularOperaciones(c)
 
 # Redondeos:
 print(round(2.356, 2), math.floor(1.9999), math.ceil(1.0000001))
+
+# Ordenar otras colecciones:
+L2 = sorted(t)
+print(t)
+print(L2)
+
+L3 = sorted(c, reverse=True)
+print(c)
+print(L3)
