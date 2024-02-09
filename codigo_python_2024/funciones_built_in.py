@@ -14,3 +14,12 @@ def calcularOperaciones(coleccion):
 # Operaciones con una lista:
 L = [1,3,4,5,6,7,8,1]
 calcularOperaciones(L)
+
+# Operaciones con una tupla:
+t = (1,3,4,5,6,7,8,1)
+calcularOperaciones(t)
+
+# Operaciones con un conjunto:
+c = {1,3,4,5,6,7,8,1}
+calcularOperaciones(c)
+
