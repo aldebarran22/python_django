@@ -9,11 +9,33 @@ def sumar(a, b):
     print(a, b)
     return a + b
 
+def mejorCandidato(d1, d2):
+    # Priorizar por los años de experiencia:
+    if d1['años'] == d2["años"]:
+        if d1["titulo"] == 'ing sup':
+            return d1
+        else:
+            return d2
+    elif d1['años'] > d2["años"]:
+        return d1
+    else:
+        return d2
 
 def testReduce():
     L = [1, 5, 4, 6, 7, 6, 3, 2, 3, 4, 6]
+    print(L)
     resul = reduce(sumar, L)
     print("resultado: ", resul)
+
+    L2 = [{"años":10, "titulo":"ing sup"}, \
+          {"años":12, "titulo":"ing sup"}, \
+            {"años":12, "titulo":"ing tec"}, \
+                {"años":8, "titulo":"ing tec"}]
+    mejor = reduce(mejorCandidato, L2)
+    print(mejor)
+    
+
+
 
 
 def calcularIva(precio):
