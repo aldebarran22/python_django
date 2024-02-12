@@ -2,6 +2,19 @@
 Programación funcional: map, filter, reduce y list compre.
 """
 
+from functools import reduce
+
+
+def sumar(a, b):
+    print(a, b)
+    return a + b
+
+
+def testReduce():
+    L = [1, 5, 4, 6, 7, 6, 3, 2, 3, 4, 6]
+    resul = reduce(sumar, L)
+    print("resultado: ", resul)
+
 
 def calcularIva(precio):
     return round(precio * 0.21, 2)
@@ -59,5 +72,6 @@ if __name__ == "__main__":
     # test1()
     # testMap()
     # testListC()
-    testFilter()
-    testFilterConLC()
+    # testFilter()
+    # testFilterConLC()
+    testReduce()
