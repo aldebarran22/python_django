@@ -15,5 +15,12 @@ def test1():
     print(L)
     print(R)
 
+def testMap():
+    L = [120.0, 45.0, 70.0, 230.0]
+    R = list(map(calcularIva, L))
+    print(L)
+    print(R)
+
 if __name__ == '__main__':
     test1()
+    testMap()
