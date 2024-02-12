@@ -5,6 +5,9 @@ POO en Python:
   	<	__lt__
 	>	__gt__
 	==	__eq__
+	!=	__ne__
+	<=	__le__
+	>=	__ge__
 
   Aritméticos: return instancia de la clase
 	+	__add__
