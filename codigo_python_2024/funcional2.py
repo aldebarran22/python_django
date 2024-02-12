@@ -16,3 +16,4 @@ d = {letra:[randint(1,30) for _ in range(5)] \
        for letra in "abcde"}
 for k, v in d.items():
     print(k, v)
+
