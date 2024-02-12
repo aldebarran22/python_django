@@ -21,6 +21,15 @@ def testMap():
     print(L)
     print(R)
 
+def testListC():
+    L = [120.0, 45.0, 70.0, 230.0]
+    R = [calcularIva(precio) for precio in L]
+    R2 = [round(precio * 0.21, 2) for precio in L]
+    print(L)
+    print(R)
+    print(R2)
+
 if __name__ == '__main__':
     test1()
     testMap()
+    testListC()
