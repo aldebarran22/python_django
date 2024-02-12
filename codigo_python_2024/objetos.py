@@ -39,10 +39,11 @@ if __name__ == "__main__":
     p1 = Persona("Ana", 66, 1.77)
     p2 = Persona("Miguel", 80, altura=1.8)
     p3 = Persona("Eva", 50, 1.82)
+    p4 = Persona("Juan", 80, altura=1.79)
     # objeto.metodo()
     p1.correr()
     print(p1)  # print(str(p1))  print(p1.__str__())
-    L = [p1, p2, p3]
+    L = [p1, p2, p3, p4]
     print(L)
     L.sort()
     print(L)
