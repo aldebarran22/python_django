@@ -1,0 +1,44 @@
+Las persona 
+Características físicas: 
+- peso, altura, edad, ... -> atributos
+
+Tareas :
+andar(), correr(), comer() ... -> métodos (función)
+
+Clase
+1 objeto -> 1 persona (instancia)
+N objetos -> N personas
+
+Constructor -> para crear objetos --> __init__ 
+
+class Persona:
+
+   def correr(self):
+	pass
+
+Relaciones entre las clases:
+- Herencia:
+	Empleado
+    		Programadores, 
+		Jefes de Proyecto, 
+		Jefes
+
+	Coche
+CGasolina      CElectrico
+        Hibrido
+
+- Composición: Cuando un objeto se desglosa en partes
+	que son objetos de otras clases.
+	Coche
+		Motor (potencia, tipoComb., CV...)
+		Ruedas
+
+- Asociación: Cuando dos objetos independientes 
+se relacionan en el tiempo en un instante dado.
+
+coche
+surtidorGas
+
+coche.repostar(surtidor)
+
+

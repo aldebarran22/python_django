@@ -7,7 +7,7 @@ Cronometra la creación de una lista con números ale.
 from random import randint
 from datetime import datetime
 
-n = 10000
+n = 500000
 
 
 def test1():
