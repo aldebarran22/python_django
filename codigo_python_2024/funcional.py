@@ -48,8 +48,16 @@ def testListC():
     print(R2)
 
 
+def testFilterConLC():
+    # Filtrar los precios < 100:
+    L = [120.0, 45.0, 70.0, 230.0, 23.04, 55, 300, 450, 1000, 21.76]
+    R = [i for i in L if i < 100]
+    print(R)
+
+
 if __name__ == "__main__":
     # test1()
     # testMap()
     # testListC()
     testFilter()
+    testFilterConLC()
