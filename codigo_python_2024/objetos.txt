@@ -1,4 +1,4 @@
-Las persona 
+Las personas 
 Características físicas: 
 - peso, altura, edad, ... -> atributos
 
