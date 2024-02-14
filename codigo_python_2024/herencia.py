@@ -25,3 +25,11 @@ class Empleado(Persona):
         self.empresa = empresa
         self.sueldo = sueldo
 
+    def __str__(self):
+        return Persona.__str__(self)+ " "+self.empresa+" "+str(self.sueldo)
+
+
+if __name__ == '__main__':
+    emp = Empleado("Sara", 34, 1.8, "CAS", 2000.0)
+    emp.correr()
+    print(emp)
