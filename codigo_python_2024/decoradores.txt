@@ -1,0 +1,38 @@
+
+def grabarCliente(cliente):
+  # graba un cliente en la BD si tengo permiso
+  if tienePermiso():
+      grabar cliente 
+  else:
+      print('error')
+
+
+def borrarCliente(cliente):
+  # borrar un cliente en la BD si tengo permiso
+  if tienePermiso():
+      borrar cliente 
+  else:
+      print('error')
+
+////////////////////////////////////////////////////////
+
+def tienePermiso(f):
+   def inner(*args, **kwargs):
+	# comprobar si el usuario tiene permiso
+        if ok
+             f(*args, **kwargs)
+        else
+             print('error  no tiene permiso')
+
+@tienePermiso
+def grabarCliente(cliente):
+  # graba un cliente en la BD si tengo permiso  
+   grabar cliente 
+ 
+@tienePermiso
+def borrarCliente(cliente):
+  # borrar un cliente en la BD si tengo permiso
+   borrar cliente 
+
+grabarCliente()
+ 
