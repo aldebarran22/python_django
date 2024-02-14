@@ -17,6 +17,7 @@ d = {letra:[randint(1,30) for _ in range(5)] \
 for k, v in d.items():
     print(k, v)
 
-t = (randint(1,30) for _ in range(20))
+# Crear una tupla a partir de un generador:
+t = tuple((randint(1,30) for _ in range(20)))
 print(t)
 
