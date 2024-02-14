@@ -52,8 +52,8 @@ if __name__ == "__main__":
     print(L)
     L.sort(key=lambda obj : obj.nombre)
     print(L)
-    exit()
-    
+
+
     p1 = Persona("Ana", 66, 1.77)
     p2 = Persona("Ana", 66, 1.77)
     if p1 != p2:  # if p1.__lt__(p2):
