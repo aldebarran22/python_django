@@ -31,5 +31,8 @@ class Empleado(Persona):
 
 if __name__ == '__main__':
     emp = Empleado("Sara", 34, 1.8, "CAS", 2000.0)
+    print(emp.__dict__)
+    del(emp.__dict__['peso'])
+    emp.__dict__['tno'] = 696558877
     emp.correr()
-    print(emp)
+    print(emp.__dict__)
