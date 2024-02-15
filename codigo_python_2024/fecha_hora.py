@@ -9,7 +9,8 @@ class Time:
 
    
    
-    def __str__(self):        
+    def __str__(self):  
+        # 9, 13, 1  -> 09:13:01      
         return '%02d:%02d:%02d' % (self.hh,self.mm,self.ss)
 
 
@@ -32,5 +33,12 @@ class Date:
         else:
             return False
 
- 
+class DateTime(Date, Time):
+    pass
+    
 
+if __name__ == '__main__':
+    t = Time(9,13,1)
+    print(t)
+
+    # 15/02/2024 18:05:34
