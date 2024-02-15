@@ -29,10 +29,13 @@ class Date:
 
 
 class DateTime(Date, Time):
-    
-    def __init__(self, dd=1, mm=1, yy=1970, h=0, m=0, s=0):        
+
+    def __init__(self, dd=1, mm=1, yy=1970, h=0, m=0, s=0):
         Date.__init__(self, dd, mm, yy)
         Time.__init__(self, h, m, s)
+
+    def __str__(self):
+        return Date.__str__(self) + " " + Time.__str__(self)
 
 
 if __name__ == "__main__":
@@ -40,3 +43,5 @@ if __name__ == "__main__":
     print(t)
 
     # 15/02/2024 18:05:34
+    dt = DateTime(15,2,2024, 18,5,34)
+    print(dt)
