@@ -44,7 +44,9 @@ def test4():
         print(n1 / 10)
         print(d["z"])
     except Exception as e:
-         print(e.__class__.__name__, e)
+        print(e.__class__.__name__, e)
+
+
 
 def test5():
     # Capturar con la superclase y otra más particular
@@ -55,13 +57,23 @@ def test5():
         print(d["z"])
     except KeyError as e:
         print(e.__class__.__name__, e)
+
     except Exception as e:
-         print(e.__class__.__name__, e)
+        print(e.__class__.__name__, e)
+        
+
+def test6(numero):
+    # lanzar una excepción
+    if numero % 2 != 0:
+        raise ValueError(f"El numero: {numero} no es correcto")
     
+    print('numero correcto: ', numero)
+
 
 if __name__ == "__main__":
     # test1()
     # test2()
     # test3()
     # test4()
-    test5()
+    # test5()
+    test6(10)
