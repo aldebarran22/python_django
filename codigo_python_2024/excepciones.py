@@ -36,8 +36,32 @@ def test3():
     except (KeyError, ZeroDivisionError) as e:
         print(e.__class__.__name__, e)
 
+def test4():
+    # Capturar con la superclase:
+    try:
+        n1 = 10
+        d = {"a": 1, "b": 2, "c": 3}
+        print(n1 / 10)
+        print(d["z"])
+    except Exception as e:
+         print(e.__class__.__name__, e)
+
+def test5():
+    # Capturar con la superclase y otra más particular
+    try:
+        n1 = 10
+        d = {"a": 1, "b": 2, "c": 3}
+        print(n1 / 10)
+        print(d["z"])
+    except KeyError as e:
+        print(e.__class__.__name__, e)
+    except Exception as e:
+         print(e.__class__.__name__, e)
+    
 
 if __name__ == "__main__":
     # test1()
     # test2()
-    test3()
+    # test3()
+    # test4()
+    test5()
