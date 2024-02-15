@@ -1,3 +1,12 @@
+try:
+    # Para ejecutar el módulo: principal.py
+    from modulos.clase_time import Time
+    from modulos.clase_date import Date
+except:
+    # Para ejecutar este módulo
+    from clase_time import Time
+    from clase_date import Date
+
 
 class DateTime(Date, Time):
 
@@ -10,3 +19,8 @@ class DateTime(Date, Time):
 
     def __str__(self):
         return Date.__str__(self) + " " + Time.__str__(self)
+
+
+if __name__ == "__main__":
+    dt = DateTime()
+    print(dt)

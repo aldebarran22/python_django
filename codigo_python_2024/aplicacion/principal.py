@@ -10,6 +10,8 @@ modulos <dir>
 """
 
 from modulos.clase_time import Time
+from modulos.clase_date import Date
+from modulos.clase_date_time import DateTime
 
 if __name__ == "__main__":
     t = Time(9, 13, 1)
