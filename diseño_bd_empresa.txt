@@ -1,0 +1,51 @@
+Empresa: tienda con att. teléfonica
+Un cliente llama por tel. le atiende un empleado.
+Pide productos que están clasificados por categoría, con los productos se genera un pedido
+y el pedido se envia al cliente a través de una empresa de transporte.
+
+Clientes:
+dni (pk)
+datos personales
+
+Empleados:
+cod-emp (PK)
+nombre
+datos personales
+
+Productos:
+id (PK)
+idcategoria (FK)
+nombre
+precio
+
+Categorías:
+id (PK)
+nombre
+
+
+productos-por-pedido
+idproducto
+idpedido
+cantidad
+precio-venta
+descuento
+
+
+Pedidos:
+id (pk)
+dni (FK)
+cod-emp (FK)
+idempresa (FK)
+fecha
+
+empresa:
+id (PK)
+titular
+Razón Social
+
+
+N productos <-> M pedidos
+1 cliente -> N pedidos
+1 empleado -> N pedidos
+1 empresa -> N pedidos
+1 categoria -> N productos

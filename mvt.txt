@@ -1,0 +1,15 @@
+enlace: listar clientes http://localhost:8000/aplicacion1/clientes
+
+1-Seleccionar vista
+2-La vista solicita al modelo los clientes
+3-Selecciona la plantilla para mostrar el listado de clientes
+
+dni	nombre
+1111	xxxx
+2222	yyyy
+
+enlace: listar clientes http://localhost:8000/aplicacion1/clientes/201
+
+1-Seleccionar vista
+2-La vista solicita al modelo un cliente
+3-Selecciona la plantilla para mostrar el cliente
