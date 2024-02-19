@@ -24,8 +24,8 @@ nombre
 
 
 productos-por-pedido
-idproducto
-idpedido
+idproducto (PK, FK)
+idpedido  (PK, FK)
 cantidad
 precio-venta
 descuento
@@ -44,7 +44,7 @@ titular
 Razón Social
 
 
-N productos <-> M pedidos
+N productos <-> M pedidos (1 pedido -> N productos-por-pedido, 1 producto -> N productos-por-pedido)
 1 cliente -> N pedidos
 1 empleado -> N pedidos
 1 empresa -> N pedidos
