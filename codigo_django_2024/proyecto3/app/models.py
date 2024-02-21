@@ -17,6 +17,8 @@ class Editor(models.Model):
     provincia = models.CharField(max_length=30)
     pais = models.CharField(max_length=30)
     web = models.URLField(max_length=50)
+    correo = models.EmailField(max_length=80)
+
 
 class Libro(models.Model):
     # Los campos del libro
