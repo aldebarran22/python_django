@@ -1,0 +1,5 @@
+Operaciones CRUD
+Create -> insert into tabla values(...) (save)
+Read -> select * from tabla  (get)
+Delete -> delete from tabla (delete)
+Update -> update tabla set campo=... (update)
