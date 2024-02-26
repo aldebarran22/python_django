@@ -1,0 +1,7 @@
+/* Reglas CSS */
+/* selector { propiedad: valor; propiedad2: valor2 }*/
+
+/*Selector por tipo: coincide con el nombre de una etiqueta html*/
+h3 {
+    color: #db0f0f
+}
