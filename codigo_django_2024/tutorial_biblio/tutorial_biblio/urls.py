@@ -21,6 +21,5 @@ import tutorial.views
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("", tutorial.views.index, name="inicio"),
-    path("hola", tutorial.views.saludar, name="saludo"),
-    path("libros/<int:id>", tutorial.views.buscarLibro),
+    path("libros", tutorial.views.libros, name="libros"),
 ]
