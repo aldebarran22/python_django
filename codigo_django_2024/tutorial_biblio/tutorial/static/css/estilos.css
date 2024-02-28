@@ -3,6 +3,8 @@
 
 body {
     background-color: #460aec;
+    font-family: tahoma, serif;
+
 }
 
 /* Selector por id */
@@ -12,6 +14,24 @@ body {
     text-align: center;
     border-radius: 10px;
     background-color: #fff;
+}
+
+header {
+    height: 100px;
+}
+
+nav {
+    background-color: #bbb6c7;
+    height: 50px;
+}
+
+nav a {
+    text-decoration: none;
+    width: 50px;
+}
+
+nav a:hover {
+    text-decoration: underline;
 }
 
 table {
