@@ -14,9 +14,9 @@ def index(request):
     numLibros = Book.objects.count()
     # Enlaces de interes:
     enlaces = {
-        "El país": "http://www.elpais.com",
+        "El país": "https://elpais.com",
         "El mundo": "http://www.elmundo.com",
-        "Marca": "http://www.elpais.com",
+        "Marca": "http://www.marca.com",
     }
     contexto = {"ahora": hora, "numLibros": numLibros, "enlaces": enlaces}
     return render(request, "index.html", contexto)
