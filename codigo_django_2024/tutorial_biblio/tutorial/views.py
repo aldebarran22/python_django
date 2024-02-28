@@ -11,7 +11,8 @@ def index(request):
     # tiene la biblioteca.
     horaActual = datetime.now()
     hora = horaActual.strftime("%d/%m/%Y %H:%M:%S")
-    contexto = {"ahora": hora}
+    numLibros = Book.objects.count()
+    contexto = {"ahora": hora, "numLibros": numLibros}
     return render(request, "index.html", contexto)
 
 
