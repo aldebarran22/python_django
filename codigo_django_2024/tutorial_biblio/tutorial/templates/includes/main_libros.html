@@ -3,6 +3,7 @@
         <caption>{{numLibros}} libros encontrados</caption>
         <thead>
             <tr>
+                <th>Nº</th>
                 <th>ISBN</th>
                 <th>TITULO</th>
                 <th>PRECIO</th>
@@ -12,6 +13,7 @@
         <tbody>
             {% for libro in libros %}
             <tr>
+                <td>{{forloop.counter}}</td>
                 <td>{{libro.isbn}}</td>
                 <td>{{libro.name}}</td>
                 <td>{{libro.price}}</td>

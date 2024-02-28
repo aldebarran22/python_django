@@ -12,7 +12,13 @@ def index(request):
     horaActual = datetime.now()
     hora = horaActual.strftime("%d/%m/%Y %H:%M:%S")
     numLibros = Book.objects.count()
-    contexto = {"ahora": hora, "numLibros": numLibros}
+    # Enlaces de interes:
+    enlaces = {
+        "El país": "http://www.elpais.com",
+        "El mundo": "http://www.elmundo.com",
+        "Marca": "http://www.elpais.com",
+    }
+    contexto = {"ahora": hora, "numLibros": numLibros, "enlaces": enlaces}
     return render(request, "index.html", contexto)
 
 
