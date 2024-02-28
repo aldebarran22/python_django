@@ -30,17 +30,30 @@ nav a {
     text-decoration: none;
     width: 50px;
     color: black;
+    margin: 0px 10px;
+    width: 100px;
 }
 
 nav a:hover {
     text-decoration: underline;
     color: rgb(170, 3, 3);
+    background-color: #AEAEAE;
 }
 
 table {
     width: 80%;
     margin-left: auto;
     margin-right: auto;
+}
+
+tr:nth-of-type(even) {
+    background-color: #3f3f3f;
+    color: white;
+
+}
+
+tr:nth-of-type(odd) {
+    background-color: #ddd;
 }
 
 /*Selector por tipo: coincide con el nombre de una etiqueta html*/
