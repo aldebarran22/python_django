@@ -11,45 +11,13 @@
 
 <body>
     <div id="contenedor">
-        <header>
-            <h3>Listado de Libros</h3>
-        </header>
-        <nav>
-            <a href="{% url 'inicio' %}">Inicio</a>
-            <a href="{% url 'admin:index' %}">Administración</a>
-            <a href="{% url 'libros' %}">Listado de libros</a>
-        </nav>
+        {% include 'includes/header.html' %}
+        {% include 'includes/nav.html'%}
         <main>
-            <section>
-                <table>
-                    <caption>{{numLibros}} libros encontrados</caption>
-                    <thead>
-                        <tr>
-                            <th>ISBN</th>
-                            <th>TITULO</th>
-                            <th>PRECIO</th>
-                            <th>EDITOR</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {% for libro in libros %}
-                        <tr>
-                            <td>{{libro.isbn}}</td>
-                            <td>{{libro.name}}</td>
-                            <td>{{libro.price}}</td>
-                            <td>{{libro.publisher.name}}</td>
-                        </tr>
-                        {% endfor %}
-                    </tbody>
-                </table>
-            </section>
-            <aside>
-                <p>Lateral derecho</p>
-            </aside>
-            <footer>
-                <h4>&copy; Curso de Django 5 - Feb 2024</h4>
-            </footer>
+            {% include 'includes/main_libros.html'%}
+            {% include 'includes/aside.html' %}
         </main>
+        {% include 'includes/footer.html' %}
     </div>
 </body>
 

@@ -10,8 +10,15 @@
 </head>
 
 <body>
-    <h3>Aplicación de prueba</h3>
-    <p>La hora es: {{ahora}}</p>
+    <div id="contenedor">
+        {% include 'includes/header.html' %}
+        {% include 'includes/nav.html'%}
+        <main>
+            {% include 'includes/main_index.html'%}
+            {% include 'includes/aside.html' %}
+        </main>
+        {% include 'includes/footer.html' %}
+    </div>
 </body>
 
 </html>

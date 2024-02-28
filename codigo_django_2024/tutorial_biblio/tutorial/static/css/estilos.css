@@ -24,3 +24,22 @@ table {
 h3 {
     color: #db0f0f
 }
+
+main {
+    background-color: #fff;
+}
+
+section {
+    float: left;
+    width: 70%;
+}
+
+aside {
+    width: 25%;
+    background-color: #dfdfdf;
+    float: right;
+}
+
+footer {
+    clear: both;
+}

@@ -1,0 +1,23 @@
+<section>
+    <table>
+        <caption>{{numLibros}} libros encontrados</caption>
+        <thead>
+            <tr>
+                <th>ISBN</th>
+                <th>TITULO</th>
+                <th>PRECIO</th>
+                <th>EDITOR</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for libro in libros %}
+            <tr>
+                <td>{{libro.isbn}}</td>
+                <td>{{libro.name}}</td>
+                <td>{{libro.price}}</td>
+                <td>{{libro.publisher.name}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</section>
