@@ -66,17 +66,9 @@ main {
 }
 
 section {
-    float: left;
-    width: 70%;
-}
-
-aside {
-    width: 25%;
-    background-color: #dfdfdf;
-    float: right;
+    width: 100%;
 }
 
 footer {
-    clear: both;
     padding: 20px;
 }
