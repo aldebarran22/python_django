@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from django.db.models import Sum
 
 # Create your views here.
 from datetime import datetime
@@ -25,4 +26,7 @@ def index(request):
 def libros(request):
     L = Book.objects.all()
     numLibros = len(L)
-    return render(request, "libros.html", {"libros": L, "numLibros": numLibros})
+    suma = Book.objects.all().aggregate(Sum("price"))["price__sum"]
+    return render(
+        request, "libros.html", {"suma": suma, "libros": L, "numLibros": numLibros}
+    )
