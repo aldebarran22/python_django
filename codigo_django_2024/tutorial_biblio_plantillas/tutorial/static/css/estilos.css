@@ -76,6 +76,18 @@ table.tabla_listado tr:nth-of-type(odd) {
     background-color: #ddd;
 }
 
+#contenedor_img {
+    width: 90%;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 30px;
+}
+
+img.img_galeria {
+    width: 300px;
+    margin: 20px 50px;
+}
+
 /*Selector por tipo: coincide con el nombre de una etiqueta html*/
 h3 {
     color: #db0f0f

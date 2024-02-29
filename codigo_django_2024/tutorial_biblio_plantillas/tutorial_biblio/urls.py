@@ -17,6 +17,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 import tutorial.views
+from django.conf.urls.static import static
+import tutorial_biblio.settings
 
 urlpatterns = [
     path("admin/", admin.site.urls),
@@ -24,3 +26,9 @@ urlpatterns = [
     path("libros", tutorial.views.libros, name="libros"),
     path("galeria", tutorial.views.galeria, name="galeria"),
 ]
+
+if tutorial_biblio.settings.DEBUG:
+    urlpatterns += static(
+        tutorial_biblio.settings.MEDIA_URL,
+        document_root=tutorial_biblio.settings.MEDIA_ROOT,
+    )

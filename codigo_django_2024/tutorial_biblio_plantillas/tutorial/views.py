@@ -39,6 +39,6 @@ def libros(request):
 
 
 def galeria(request):
-    fotos = Fotografia.objects.all()    
+    fotos = Fotografia.objects.all()
     contexto = {"enlaces": getEnlaces(), "fotos": fotos}
-    return render(request, "index.html", contexto)
+    return render(request, "galeria.html", contexto)
