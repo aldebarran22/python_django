@@ -33,3 +33,11 @@ class Book(models.Model):
 class Store(models.Model):
     name = models.CharField(max_length=300)
     books = models.ManyToManyField(Book)
+
+
+class Fotografia(models.Model):
+    titulo = models.CharField(max_length=30)
+    fotografia = models.ImageField(upload_to="images/")
+
+    def __str__(self):
+        return self.titulo
