@@ -1,0 +1,82 @@
+/* Reglas CSS */
+/* selector { propiedad: valor; propiedad2: valor2 }*/
+
+body {
+    background-color: #460aec;
+    font-family: tahoma, serif;
+
+}
+
+/* Selector por id */
+#contenedor {
+    margin: 10px auto;
+    width: 90%;
+    text-align: center;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+header {
+    height: 100px;
+}
+
+nav {
+    background-color: #bbb6c7;
+    /*height: 50px;*/
+    padding: 20px
+}
+
+nav a {
+    text-decoration: none;
+    width: 50px;
+    color: black;
+    margin: 0px 10px;
+    width: 100px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+    color: rgb(170, 3, 3);
+    background-color: #AEAEAE;
+}
+
+table {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+tr:nth-of-type(even) {
+    background-color: #3f3f3f;
+    color: white;
+
+}
+
+tr:nth-of-type(odd) {
+    background-color: #ddd;
+}
+
+/*Selector por tipo: coincide con el nombre de una etiqueta html*/
+h3 {
+    color: #db0f0f
+}
+
+main {
+    background-color: #fff;
+}
+
+section {
+    float: left;
+    width: 70%;
+}
+
+aside {
+    width: 25%;
+    background-color: #dfdfdf;
+    float: right;
+}
+
+footer {
+    clear: both;
+    padding: 20px;
+}

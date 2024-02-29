@@ -1,0 +1,19 @@
+<p>La biblioteca dispone de {{numLibros}} libros</p>
+<p>Nuestros principales autores</p>
+<table>
+    <tr>
+        <td>
+            {%load static%}
+            <img src="{%static 'img/persona1.jpg' %}" alt="persona1">
+        </td>
+        <td>
+            {%load static%}
+            <img src="{%static 'img/persona2.jpg' %}" alt="persona1">
+        </td>
+        <td>
+            {%load static%}
+            <img src="{%static 'img/persona3.jpg' %}" alt="persona1">
+        </td>
+    </tr>
+</table>
+<p>Hora actual: {{ahora}}</p>
