@@ -4,7 +4,7 @@ from django.db.models import Sum
 
 # Create your views here.
 from datetime import datetime
-from tutorial.models import Book
+from tutorial.models import Book, Fotografia
 
 
 def getEnlaces():
@@ -36,3 +36,9 @@ def libros(request):
         "libros.html",
         {"suma": suma, "libros": L, "numLibros": numLibros, "enlaces": getEnlaces()},
     )
+
+
+def galeria(request):
+    fotos = Fotografia.objects.all()    
+    contexto = {"enlaces": getEnlaces(), "fotos": fotos}
+    return render(request, "index.html", contexto)
