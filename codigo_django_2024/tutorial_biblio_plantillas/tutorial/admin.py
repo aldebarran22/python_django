@@ -13,7 +13,12 @@ class PublisherAdmin(admin.ModelAdmin):
 
 
 class BookAdmin(admin.ModelAdmin):
+    # Columnas del listado
     list_display = ("isbn", "name", "price")
+    # Campos de búsqueda
+    search_fields = ("name",)
+    # Propiedad del book (FK), dentro de la FK la columna que nos interesa
+    list_filter = ("publisher__name",)
 
 
 # Registrar las clases del modelo para poder

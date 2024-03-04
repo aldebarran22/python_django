@@ -11,9 +11,18 @@ class Author(models.Model):
     def __str__(self):
         return self.name
 
+    class Meta:
+        verbose_name_plural = "Autores"
+
 
 class Publisher(models.Model):
     name = models.CharField(max_length=300)
+
+    def __str__(self):
+        return str(self.name)
+
+    class Meta:
+        verbose_name_plural = "Editores"
 
 
 class Book(models.Model):
@@ -28,6 +37,7 @@ class Book(models.Model):
 
     class Meta:
         ordering = ["price"]
+        verbose_name_plural = "Libros"
 
 
 class Store(models.Model):
