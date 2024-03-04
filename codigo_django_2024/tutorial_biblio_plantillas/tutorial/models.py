@@ -29,6 +29,7 @@ class Book(models.Model):
     isbn = models.CharField(max_length=9)
     name = models.CharField(max_length=300)
     price = models.DecimalField(max_digits=10, decimal_places=2)
+    fecha_publicacion = models.DateField(blank=True, null=True)
     authors = models.ManyToManyField(Author)
     publisher = models.ForeignKey(Publisher, on_delete=models.PROTECT)
 
