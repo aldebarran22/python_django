@@ -104,13 +104,17 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/2.1/topics/i18n/
 
+from django.conf.locale.es import formats as es_formats
+
+USE_L10N = False
+es_formats.DATE_FORMAT = "d/m/Y"
+
 LANGUAGE_CODE = "es"
 
 TIME_ZONE = "UTC"
 
 USE_I18N = True
 
-USE_L10N = True
 
 USE_TZ = True
 
