@@ -9,7 +9,7 @@ class Author(models.Model):
     age = models.IntegerField()
 
     def __str__(self):
-        return self.name + " edad:" + str(self.age)
+        return self.name
 
 
 class Publisher(models.Model):
