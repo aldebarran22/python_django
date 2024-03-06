@@ -56,5 +56,6 @@ def formulario(request):
 
 def resultado_form(request):
     # Para recoger el formulario:
-    contexto = {"enlaces": getEnlaces(), "info": request.POST}
+    info = request.POST["nombre"] + " " + request.POST["pass"]
+    contexto = {"enlaces": getEnlaces(), "info": info}
     return render(request, "formulario.html", contexto)
