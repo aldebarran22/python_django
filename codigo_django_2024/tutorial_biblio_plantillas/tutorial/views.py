@@ -42,3 +42,7 @@ def galeria(request):
     fotos = Fotografia.objects.all()
     contexto = {"enlaces": getEnlaces(), "fotos": fotos}
     return render(request, "galeria.html", contexto)
+
+def info_request(request):
+    contexto = {"meta":request.META}
+    return render(request, "info.html", contexto)
