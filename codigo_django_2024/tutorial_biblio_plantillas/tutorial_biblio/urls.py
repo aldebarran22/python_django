@@ -27,6 +27,7 @@ urlpatterns = [
     path("galeria", tutorial.views.galeria, name="galeria"),
     path("info_request", tutorial.views.info_request, name="info_request"),
     path("formulario", tutorial.views.formulario, name="formulario"),    
+    path("resultado/", tutorial.views.resultado_form),
 ]
 
 if tutorial_biblio.settings.DEBUG:

@@ -83,7 +83,11 @@ table.tabla_form {
     margin-right: auto;
 }
 
-table.tabla_form tr {
+table.tabla_form form {
+    padding: 10px;
+}
+
+table.tabla_form form tr {
     margin-bottom: 5px;
 }
 

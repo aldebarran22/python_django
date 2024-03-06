@@ -1,6 +1,7 @@
 <h3>Rellenar formulario</h3>
 <table class="tabla_form">
     <form method="post" action="/resultado/">
+        {% csrf_token %}
         <tr>
             <td><label for="nombre">NOMBRE</label></td>
             <td><input type="text" id="nombre" name="nombre" required></td>
@@ -15,3 +16,4 @@
         </tr>
     </form>
 </table>
+<h4>{{info}}</h4>

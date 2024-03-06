@@ -50,4 +50,11 @@ def info_request(request):
 
 
 def formulario(request):
+    # Para mostrar el formulario
     return render(request, "formulario.html", {"enlaces": getEnlaces()})
+
+
+def resultado_form(request):
+    # Para recoger el formulario:
+    contexto = {"enlaces": getEnlaces(), "info": request.POST}
+    return render(request, "formulario.html", contexto)
