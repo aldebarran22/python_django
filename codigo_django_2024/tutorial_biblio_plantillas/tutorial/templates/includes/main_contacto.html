@@ -1,0 +1,10 @@
+<h3>Rellenar los datos del contacto</h3>
+<form action="" method="post">
+    <!--action: vacío se reenvía así mismo-->
+    <!--Cross site request forgery, protege de ataques CSRF-->
+    {% csrf_token %}
+    <table>
+        {{ form.as_table }} <!--Lo muestra como una tabla-->
+    </table>
+    <input type="submit" value="Enviar">
+</form>
