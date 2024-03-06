@@ -1,5 +1,5 @@
 <h3>Propiedades de request.META</h3>
-<table>
+<table class="tabla_listado">
     <thead>
         <tr>
             <th>PROPIEDAD</th>
@@ -10,7 +10,7 @@
         {% for key, value in meta.items %}
         <tr>
             <td>{{key}}</td>
-            <td>{{value}}</td>
+            <td>{{value|truncatechars:"100"}}</td>
         </tr>
         {% endfor %}
     </tbody>
