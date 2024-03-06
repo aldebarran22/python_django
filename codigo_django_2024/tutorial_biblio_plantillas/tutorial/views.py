@@ -68,9 +68,10 @@ def contacto(request):
         # Y lo rellenamos con request.POST
         form = FormContacto(request.POST)
         # Escribir lo que han rellenado en el form
-        print(form.cleaned_data)
+        if form.is_valid():
+            print(form.cleaned_data)
     else:
         # Es la primera vez, se muestra el form vacío
         form = FormContacto()
 
-    return render(request, "contacto.html", context={"form":form})
+    return render(request, "contacto.html", context={"form": form})
