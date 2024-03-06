@@ -5,6 +5,7 @@ from django.db.models import Sum
 # Create your views here.
 from datetime import datetime
 from tutorial.models import Book, Fotografia
+from tutorial.forms import FormContacto
 
 
 def getEnlaces():
@@ -59,3 +60,17 @@ def resultado_form(request):
     info = request.POST["nombre"] + " " + request.POST["pass"]
     contexto = {"enlaces": getEnlaces(), "info": info}
     return render(request, "formulario.html", contexto)
+
+
+def contacto(request):
+    if request.method == "POST":
+        # Han envíado el formulario
+        # Y lo rellenamos con request.POST
+        form = FormContacto(request.POST)
+        # Escribir lo que han rellenado en el form
+        print(form.cleaned_data)
+    else:
+        # Es la primera vez, se muestra el form vacío
+        form = FormContacto()
+
+    return render(request, "contacto.html", context={"form":form})
