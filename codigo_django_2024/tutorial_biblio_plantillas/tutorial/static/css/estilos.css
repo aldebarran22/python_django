@@ -87,8 +87,13 @@ table.tabla_form form {
     padding: 10px;
 }
 
-table.tabla_form form tr {
+table.tabla_form tr {
     margin-bottom: 5px;
+}
+
+table.form_contacto {
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #contenedor_img {

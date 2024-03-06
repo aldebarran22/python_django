@@ -3,7 +3,7 @@
     <!--action: vacío se reenvía así mismo-->
     <!--Cross site request forgery, protege de ataques CSRF-->
     {% csrf_token %}
-    <table>
+    <table class="form_contacto">
         {{ form.as_table }} <!--Lo muestra como una tabla-->
     </table>
     <input type="submit" value="Enviar">
