@@ -45,9 +45,9 @@ def galeria(request):
 
 
 def info_request(request):
-    contexto = {"meta": request.META}
+    contexto = {"meta": request.META, "enlaces": getEnlaces()}
     return render(request, "info.html", contexto)
 
 
 def formulario(request):
-    return render(request, "formulario.html")
+    return render(request, "formulario.html", {"enlaces": getEnlaces()})

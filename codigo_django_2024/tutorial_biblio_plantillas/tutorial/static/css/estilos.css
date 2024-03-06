@@ -78,6 +78,15 @@ table.tabla_listado tr:nth-of-type(odd) {
     background-color: #ddd;
 }
 
+table.tabla_form {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table.tabla_form tr {
+    margin-bottom: 5px;
+}
+
 #contenedor_img {
     width: 90%;
     display: flex;
