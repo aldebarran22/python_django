@@ -36,6 +36,11 @@ urlpatterns = [
         tutorial.views_clases.DetalleLibro.as_view(),
         name="verLibro",
     ),
+    path(
+        "borrarLibro/<int:pk>",
+        tutorial.views_clases.BookDelete.as_view(),
+        name="borrarLibro",
+    ),
 ]
 
 if tutorial_biblio.settings.DEBUG:
