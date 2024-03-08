@@ -2,4 +2,24 @@
 {% block title %}Listado de Libro II{% endblock %}
 {% block main %}
 <h3>Listado de Libro II</h3>
+{% if object_list %}
+<table class="tabla_listado">
+    <thead>
+        <th>TITULO</th>
+        <th>PRECIO</th>
+        <th>EDITOR</th>
+    </thead>
+    <tbody>
+        {% for libro in object_list %}
+        <tr>
+            <td>{{libro.name}}</td>
+            <td>{{libro.price|floatformat:"2"}}</td>
+            <td>{{libro.publisher.name}}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% else %}
+<p class="errores">No tenemos libros en la BD</p>
+{% endif %}
 {% endblock %}
