@@ -96,6 +96,18 @@ table.form_contacto {
     margin-right: auto;
 }
 
+.errores {
+    margin: 10px auto;
+    padding: 10px;
+    border: 1px solid red;
+    border-radius: 15px;
+    color: red;
+    background-color: white;
+    font-style: italic;
+    width: 50%;
+
+}
+
 #contenedor_img {
     width: 90%;
     display: flex;

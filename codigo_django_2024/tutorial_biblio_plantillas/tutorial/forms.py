@@ -12,7 +12,7 @@ class FormContacto(forms.Form):
     paises = [(1, "España"), (2, "Italia"), (3, "Francia")]
 
     nombre = forms.CharField(max_length=25)
-    usuario = forms.CharField(min_length=10)
+    usuario = forms.CharField(min_length=5)
     password = forms.CharField(
         widget=forms.PasswordInput,
         error_messages={"required": "El password obligatorio"},
@@ -28,7 +28,8 @@ class FormContacto(forms.Form):
     def clean_observaciones(self):
         # Recuperar el contenido del campo observaciones
         aux = self.cleaned_data["observaciones"]
+        print("Observaciones: ", aux)
         numPalabras = len(aux.split(" "))
         if numPalabras < 5:
-            raise forms.ValidationError("Como mínimo debe teclear 5 palabras")
+            raise forms.ValidationError("Observaciones: Como mínimo debe teclear 5 palabras")
         return aux

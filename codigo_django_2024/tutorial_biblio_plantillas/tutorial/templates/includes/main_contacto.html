@@ -3,7 +3,7 @@
 {% if form.errors %}
 <h4>Tienes errores en el formulario</h4>
 <div class="errores">
-    {% for field in form.fields %}
+    {% for field in form %}
     {% for error in field.errors %}
     <strong>{{error}}</strong>
     {% endfor %}
