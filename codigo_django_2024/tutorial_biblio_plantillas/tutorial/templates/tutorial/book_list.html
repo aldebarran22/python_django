@@ -5,6 +5,7 @@
 {% if object_list %}
 <table class="tabla_listado">
     <thead>
+        <th>ISBN</th>
         <th>TITULO</th>
         <th>PRECIO</th>
         <th>EDITOR</th>
@@ -12,6 +13,7 @@
     <tbody>
         {% for libro in object_list %}
         <tr>
+            <td><a href="#">{{libro.isbn}}</a></td>
             <td>{{libro.name}}</td>
             <td>{{libro.price|floatformat:"2"}}</td>
             <td>{{libro.publisher.name}}</td>

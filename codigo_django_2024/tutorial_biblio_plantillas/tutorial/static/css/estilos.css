@@ -68,6 +68,15 @@ table.tabla_listado {
     margin-right: auto;
 }
 
+table.tabla_listado a {
+    text-decoration: none;
+    color: orangered;
+}
+
+table.tabla_listado a:hover {
+    text-decoration: underline;
+}
+
 table.tabla_listado tr:nth-of-type(even) {
     background-color: #3f3f3f;
     color: white;
