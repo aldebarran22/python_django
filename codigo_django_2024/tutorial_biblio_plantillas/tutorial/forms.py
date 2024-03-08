@@ -24,3 +24,11 @@ class FormContacto(forms.Form):
     publicidad = forms.BooleanField(required=False, label="Recibir publicidad")
     pais = forms.ChoiceField(choices=paises, required=False)
     observaciones = forms.CharField(max_length=200, widget=forms.Textarea)
+
+    def clean_observaciones(self):
+        # Recuperar el contenido del campo observaciones
+        aux = self.cleaned_data["observaciones"]
+        numPalabras = len(aux.split(" "))
+        if numPalabras < 5:
+            raise forms.ValidationError("Como mínimo debe teclear 5 palabras")
+        return aux
