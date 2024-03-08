@@ -5,12 +5,12 @@
 <div class="errores">
     {% for field in form %}
     {% for error in field.errors %}
-    <strong>{{error}}</strong>
+    <p><strong>{{field.name.upper}}:{{error}}</strong></p>
     {% endfor %}
     {% endfor %}
 </div>
 {% endif %}
-<form action="" method="post">
+<form action="" method="post" novalidate>
     <!--action: vacío se reenvía así mismo-->
     <!--Cross site request forgery, protege de ataques CSRF-->
     {% csrf_token %}

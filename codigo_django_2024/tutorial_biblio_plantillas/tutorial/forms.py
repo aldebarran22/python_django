@@ -31,5 +31,5 @@ class FormContacto(forms.Form):
         print("Observaciones: ", aux)
         numPalabras = len(aux.split(" "))
         if numPalabras < 5:
-            raise forms.ValidationError("Observaciones: Como mínimo debe teclear 5 palabras")
+            raise forms.ValidationError("Como mínimo debe teclear 5 palabras")
         return aux
