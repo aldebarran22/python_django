@@ -13,7 +13,7 @@
     <tbody>
         {% for libro in object_list %}
         <tr>
-            <td><a href="#">{{libro.isbn}}</a></td>
+            <td><a href="{% url 'verLibro' libro.pk %}">{{libro.isbn}}</a></td>
             <td>{{libro.name}}</td>
             <td>{{libro.price|floatformat:"2"}}</td>
             <td>{{libro.publisher.name}}</td>

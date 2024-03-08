@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block title %}{{book.name}}{% endblock %}
+{% block main %}
+<h3>Datos del libro</h3>
+<p>{{book.name}}</p>
+<p>{{book.price|floatformat:"2"}}</p>
+<p>{{book.publisher.name}}</p>
+<a href="{% url 'libros2' %}">Volver al listado</a>
+{% endblock %}
