@@ -17,6 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 import tutorial.views
+import tutorial.views_clases
 from django.conf.urls.static import static
 import tutorial_biblio.settings
 
@@ -29,6 +30,12 @@ urlpatterns = [
     path("formulario", tutorial.views.formulario, name="formulario"),
     path("resultado/", tutorial.views.resultado_form),
     path("contacto/", tutorial.views.contacto, name="contacto"),
+    path("libros2", tutorial.views_clases.ListadoLibros.as_view(), name="libros2"),
+    path(
+        "libros2/<int:pk>",
+        tutorial.views_clases.DetalleLibro.as_view(),
+        name="verLibro",
+    ),
 ]
 
 if tutorial_biblio.settings.DEBUG:
