@@ -8,6 +8,7 @@ from tutorial.models import Book, Fotografia
 from tutorial.forms import FormContacto
 
 import csv
+from reportlab.pdfgen import canvas
 
 
 def getEnlaces():
@@ -77,6 +78,16 @@ def contacto(request):
         form = FormContacto()
 
     return render(request, "contacto.html", context={"form": form})
+
+
+def librosPDF(request):
+    response = HttpResponse(content_type="application/pdf")
+    response.headers["Content-Disposition"] = "attachment; filename=libros.pdf"
+    pdf = canvas.Canvas(response)
+    pdf.drawString(50, 825, "LISTADO DE LIBROS")
+    pdf.showPage()
+    pdf.save()
+    return response
 
 
 def librosCSV(request):
