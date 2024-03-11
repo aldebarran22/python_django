@@ -9,6 +9,8 @@ from tutorial.forms import FormContacto
 
 import csv
 from reportlab.pdfgen import canvas
+from reportlab.platypus import Table
+from reportlab.lib.units import inch, cm, mm
 
 
 def getEnlaces():
@@ -81,10 +83,15 @@ def contacto(request):
 
 
 def librosPDF(request):
+    libros = Book.objects.all()
+    datosTabla = [libro.to_list() for libro in libros]
+    datosTabla.insert(0, Book.getCabeceras())
+    tablaPDF = Table(datosTabla)
     response = HttpResponse(content_type="application/pdf")
     response.headers["Content-Disposition"] = "attachment; filename=libros.pdf"
     pdf = canvas.Canvas(response)
     pdf.drawString(50, 825, "LISTADO DE LIBROS")
+    tablaPDF.wrapOn(pdf, 2 * cm, 6 * cm)
     pdf.showPage()
     pdf.save()
     return response
