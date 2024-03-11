@@ -82,7 +82,7 @@ def contacto(request):
 def librosCSV(request):
     response = HttpResponse(content_type="text/csv")
     response.headers["Content-Disposition"] = "attachment; filename=libros.csv"
-    writer = csv.writer(response)
+    writer = csv.writer(response, delimiter=";")
     writer.writerow(Book.getCabeceras())
     L = Book.objects.all()
     for b in L:
