@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %}Datos del libro{% endblock %}
+{% block main %}
+<h3>Nuevos Libros</h3>
+<form method="post">
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type="submit" value="Grabar">
+</form>
+{% endblock %}
