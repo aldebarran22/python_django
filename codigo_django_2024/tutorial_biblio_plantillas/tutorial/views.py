@@ -84,7 +84,7 @@ def contacto(request):
 
 def librosPDF(request):
     libros = Book.objects.all()
-    datosTabla = [libro.to_list() for libro in libros]
+    datosTabla = [libro.toList() for libro in libros]
     datosTabla.insert(0, Book.getCabeceras())
     tablaPDF = Table(datosTabla)
     response = HttpResponse(content_type="application/pdf")

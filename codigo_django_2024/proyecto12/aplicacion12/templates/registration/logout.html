@@ -1,0 +1,7 @@
+{% extends "aplicacion12/base.html" %}
+
+{% block content %}
+<p>Logged out!</p>  
+
+<a href="{% url 'login' %}">Login de nuevo</a> | <a href="{% url 'getinfo' %}">Home</a>
+{% endblock %}
