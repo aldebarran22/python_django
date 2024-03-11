@@ -93,4 +93,4 @@ def librosCSV(request):
 
 def librosXML(request):
     libros = Book.objects.all()
-    return render(request, "libros.xml", {"libros": libros, "content_type": "xml/text"})
+    return render(request, "libros.xml", {"libros": libros}, content_type="text/xml")

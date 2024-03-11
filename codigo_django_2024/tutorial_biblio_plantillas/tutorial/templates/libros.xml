@@ -1,17 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <libros>
 	{% for libro in libros %}
-	<isbn>
-		{{libro.isbn}}
-	</isbn>
-	<titulo>
-		{{libro.name}}
-	</titulo>
-	<precio>
-		{{libro.price}}
-	</precio>
-	<editor>
-		{{libro.publisher}}
-	</editor>
+	<libro>
+		<isbn>
+			{{libro.isbn}}
+		</isbn>
+		<titulo>
+			{{libro.name}}
+		</titulo>
+		<precio>
+			{{libro.price}}
+		</precio>
+		<editor>
+			{{libro.publisher}}
+		</editor>
+	</libro>
 	{% endfor %}
 </libros>
