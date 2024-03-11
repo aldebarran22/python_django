@@ -32,3 +32,4 @@ class BookCreate(CreateView):
     model = Book
     fields = ["isbn", "name", "price", "publisher", "authors"]
     success_url = reverse_lazy("libros2")
+    

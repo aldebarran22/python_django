@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block title %}Datos del libro{% endblock %}
 {% block main %}
-<h3>Nuevos Libros</h3>
+<h3>Datos de Libro</h3>
 <form method="post">
     {% csrf_token %}
     {{form.as_p}}
