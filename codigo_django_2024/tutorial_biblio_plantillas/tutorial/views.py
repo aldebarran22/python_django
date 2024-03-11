@@ -9,6 +9,7 @@ from tutorial.forms import FormContacto
 
 import csv
 
+
 def getEnlaces():
     # Enlaces de interes:
     enlaces = {
@@ -80,9 +81,11 @@ def contacto(request):
 
 def librosCSV(request):
     response = HttpResponse(content_type="text/csv")
-    response.headers['Content-Disposition'] = 'attachment; filename=libros.csv'
+    response.headers["Content-Disposition"] = "attachment; filename=libros.csv"
     writer = csv.writer(response)
-
-    
+    writer.writerow(Book.getCabeceras())
+    L = Book.objects.all()
+    for b in L:
+        writer.writerow(b.toList())
 
     return response

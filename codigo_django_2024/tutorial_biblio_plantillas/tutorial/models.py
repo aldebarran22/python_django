@@ -36,7 +36,8 @@ class Book(models.Model):
     def __str__(self):
         return self.name + " precio: " + str(self.price)
 
-    def getCabeceras(self):
+    @staticmethod
+    def getCabeceras():
         return ["ISBN", "NAME", "PRICE", "DATE", "PUBLISHER"]
 
     def toList(self):
