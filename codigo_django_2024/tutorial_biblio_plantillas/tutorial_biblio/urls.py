@@ -47,7 +47,8 @@ urlpatterns = [
         name="editarLibro",
     ),
     path("nuevoLibro/", tutorial.views_clases.BookCreate.as_view(), name="nuevolibro"),
-    path("librosCSV/", tutorial.views.librosCSV, name="libros_csv")
+    path("librosCSV/", tutorial.views.librosCSV, name="libros_csv"),
+    path("librosXML/", tutorial.views.librosXML, name="libros_xml"),
 ]
 
 if tutorial_biblio.settings.DEBUG:

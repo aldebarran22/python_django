@@ -89,3 +89,8 @@ def librosCSV(request):
         writer.writerow(b.toList())
 
     return response
+
+
+def librosXML(request):
+    libros = Book.objects.all()
+    return render(request, "libros.xml", {"libros": libros, "content_type": "xml/text"})
