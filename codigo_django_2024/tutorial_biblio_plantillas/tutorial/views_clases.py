@@ -25,8 +25,10 @@ class BookDelete(DeleteView):
 class BookUpdate(UpdateView):
     model = Book
     fields = ["isbn", "name", "price", "publisher", "authors"]
+    success_url = reverse_lazy("libros2")
 
 
 class BookCreate(CreateView):
     model = Book
     fields = ["isbn", "name", "price", "publisher", "authors"]
+    success_url = reverse_lazy("libros2")
