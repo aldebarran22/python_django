@@ -1,24 +1,32 @@
-<html>
-    <head><title></title></head>
-    <body>
-        <div>
-            {% block menu %}
-            <h3>superusuario: antonio / antonio</h3>
-            <h3>kraken / asd123_*</h3>
-            <hr/>
-            <a href="{% url 'admin:index' %}">Admin</a> |            
-            <a href="{% url 'login' %}">Login</a> |
-            <a href="{% url 'logout' %}">Logout</a><br /><br />
-            <a href="{% url 'operacion1' %}">Operacion1 (libre)</a> | 
-            <a href="{% url 'operacion2' %}">Operacion2 (protegida)</a><br /><br />
-            <p>Paginas con vistas genéricas</p>
-            <a href="{% url 'pagina1' %}">Pagina1 (protegida)</a> |
-            <a href="{% url 'escuchar_cancion' %}">Escuchar canción (protegida)</a> |
-            <a href="{% url 'bajar_cancion' %}">Bajar canción (protegida)</a> 
-            {% endblock %}    
-        </div>
-        <div>
-            {%block content %}{% endblock %}
-        </div>
-    </body>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        {% block menu %}
+        <h3>superusuario: antonio / antonio</h3>
+        <h3>kraken / asd123_*</h3>
+        <hr />
+        <a href="{% url 'admin:index' %}">Admin</a> |
+        <a href="{% url 'login' %}">Login</a> |
+        <a href="{% url 'logout' %}">Logout</a><br /><br />
+        <a href="{% url 'operacion1' %}">Operacion1 (libre)</a> |
+        <a href="{% url 'operacion2' %}">Operacion2 (protegida)</a><br /><br />
+        <p>Paginas con vistas genéricas</p>
+        <a href="{% url 'pagina1' %}">Pagina1 (protegida)</a> |
+        <a href="{% url 'escuchar_cancion' %}">Escuchar canción (protegida)</a> |
+        <a href="{% url 'bajar_cancion' %}">Bajar canción (protegida)</a>
+        {% endblock %}
+    </div>
+    <div>
+        {%block content %}{% endblock %}
+    </div>
+</body>
+
 </html>
