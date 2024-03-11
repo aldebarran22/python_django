@@ -36,6 +36,18 @@ class Book(models.Model):
     def __str__(self):
         return self.name + " precio: " + str(self.price)
 
+    def getCabeceras(self):
+        return ["ISBN", "NAME", "PRICE", "DATE", "PUBLISHER"]
+
+    def toList(self):
+        return [
+            self.isbn,
+            self.name,
+            self.price,
+            self.fecha_publicacion,
+            self.publisher.name,
+        ]
+
     class Meta:
         ordering = ["price"]
         verbose_name_plural = "Libros"

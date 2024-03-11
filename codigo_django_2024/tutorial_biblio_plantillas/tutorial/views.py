@@ -7,6 +7,7 @@ from datetime import datetime
 from tutorial.models import Book, Fotografia
 from tutorial.forms import FormContacto
 
+import csv
 
 def getEnlaces():
     # Enlaces de interes:
@@ -75,3 +76,13 @@ def contacto(request):
         form = FormContacto()
 
     return render(request, "contacto.html", context={"form": form})
+
+
+def librosCSV(request):
+    response = HttpResponse(content_type="text/csv")
+    response.headers['Content-Disposition'] = 'attachment; filename=libros.csv'
+    writer = csv.writer(response)
+
+    
+
+    return response
